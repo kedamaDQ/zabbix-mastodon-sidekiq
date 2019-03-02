@@ -15,10 +15,17 @@ clone this repository.
 ```
 
 copy or link zabbix-userparameter-sidekiq.conf to zabbix_agentd.d.
+
 on ubuntu:
 
 ```
 ln -s /path/to/zabbix-userparameter-sidekiq.conf /etc/zabbix/zabbix_agentd.d/userparameter-sidekiq.conf
+```
+
+restart zabbix_agentd
+
+```
+# systemctl restart zabbix_agentd
 ```
 
 import zabbix-template.xml to zabbix server and attach template to host.
