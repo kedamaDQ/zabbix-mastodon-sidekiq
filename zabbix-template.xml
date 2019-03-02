@@ -4,9 +4,6 @@
     <date>2019-03-02T09:21:39Z</date>
     <groups>
         <group>
-            <name>Linux servers</name>
-        </group>
-        <group>
             <name>mastodon</name>
         </group>
     </groups>
