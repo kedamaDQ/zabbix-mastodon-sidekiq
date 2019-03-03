@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2019-03-02T09:21:39Z</date>
+    <date>2019-03-03T05:36:59Z</date>
     <groups>
         <group>
             <name>mastodon</name>
@@ -13,9 +13,6 @@
             <name>sidekiq zabbix-agent</name>
             <description/>
             <groups>
-                <group>
-                    <name>Linux servers</name>
-                </group>
                 <group>
                     <name>mastodon</name>
                 </group>
@@ -636,7 +633,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{sidekiq.zabbix-agent:sidekiq.enqueued.last(#3)}&gt;20</expression>
+            <expression>{sidekiq.zabbix-agent:sidekiq.enqueued.count(#5,20,gt)}&gt;3</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>enqueued bursting</name>
